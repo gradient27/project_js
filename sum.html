@@ -1,14 +1,22 @@
 <meta charset="utf-8">
 <script>
-		var n = +prompt ("Пожалуйста, введите число");
+		/*var n = +prompt ("Пожалуйста, введите число");
 		var sum = 0;
-		if (isNaN(n)){
-		document.write("Нужно ввести число");
-		} else {
-			for (i=0; i <= n; i++){
-			sum = sum + i; // sum +=i;
-			//document.write(i + " " + sum + "<br>");
+		while (isNaN(n) || n < 0){
+			n = +prompt ("Пожалуйста, введите число");
+		}
+		for (i=0; i <= n; i++){
+			sum = sum + i;
 			}
 			document.write(sum);
+			*/
+			
+			do{
+			var n = +prompt ("Пожалуйста, введите число");
+			} while (isNaN(n) || n < 0)
+			var sum = 0;
+			for (i=0; i <= n; i++){
+			sum = sum + i;
 			}
+			document.write(sum);
 </script>
