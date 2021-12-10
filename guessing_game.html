@@ -1,11 +1,44 @@
+<!DOCTYPE html>
 <meta charset="utf-8">
 <script>
 
 var answer = parseInt(Math.random()*100);
 //alert(answer);
 
+/*
 do{
 var userAnswer = +prompt("Угадайте число от 0 до 100");
-} while(isNaN(userAnswer) && userAnswer >= 1 && userAnswer >= 100)		
-alert(userAnswer +" Загадано " + answer);		
+} while(isNaN(userAnswer) && userAnswer >= 1 && userAnswer >= 100)
+
+for(var tryCount = 1; tryCount <= 7; tryCount ++){
+
+	if(userAnswer == answer){
+		document.write("Вы угадали" + "<br>");
+		break;
+	} else if (userAnswer > answer){
+		document.write("Вы ввели слишком большое число" + "<br>");
+	} else if (userAnswer < answer){
+		document.write("Вы ввели слишком маленькое число" + "<br>");
+	}
+	document.write("У Вас осталось " + (7 - tryCount) + " попыток");
+	do{
+	userAnswer = +prompt("Попробуйте еще раз");
+	} while(isNaN(userAnswer) && userAnswer >= 1 && userAnswer >= 100)
+
+}		
+*/
+var userAnswer = +prompt("Угадайте число от 0 до 100");
+for(var tryCount = 1; tryCount <= 7; tryCount ++){
+
+	if(userAnswer == answer){
+		document.write("Вы угадали" + "<br>");
+		break;
+	} else if (userAnswer > answer){
+		document.write("Вы ввели слишком большое число" + "<br>");
+	} else if (userAnswer < answer){
+		document.write("Вы ввели слишком маленькое число" + "<br>");
+	}
+	document.write("У Вас осталось " + (7 - tryCount) + " попыток <br>");
+	userAnswer = +prompt("Угадайте число от 0 до 100");
+//alert(userAnswer +" Загадано " + answer);		
 </script>
