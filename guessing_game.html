@@ -1,0 +1,11 @@
+<meta charset="utf-8">
+<script>
+
+var answer = parseInt(Math.random()*100);
+//alert(answer);
+
+do{
+var userAnswer = +prompt("Угадайте число от 0 до 100");
+} while(isNaN(userAnswer) && userAnswer >= 1 && userAnswer >= 100)		
+alert(userAnswer +" Загадано " + answer);		
+</script>
