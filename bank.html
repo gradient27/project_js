@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script>
+var summa = +prompt("Введите сумму вклада");
+var proc = +prompt("Введите процент в год");
+var cntlet = +prompt("На сколько лет вклад");
+for (var god=1; god <= cntlet; god ++){
+summa = summa + (summa*(proc/100));
+alert("Через " + god + " лет сумма составит " + parseInt(summa));
+}
+
+
+</script>
