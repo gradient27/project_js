@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <script>
 
-var answer = parseInt(Math.random()*100);
+
 //alert(answer);
 
 /*
@@ -27,18 +27,26 @@ for(var tryCount = 1; tryCount <= 7; tryCount ++){
 
 }		
 */
+var answer = parseInt(Math.random()*100);
 var userAnswer = +prompt("Угадайте число от 0 до 100");
-for(var tryCount = 1; tryCount <= 7; tryCount ++){
+var maxTryCount = 7;
+for(var tryCount = 1; tryCount <= maxTryCount; tryCount ++){
 
 	if(userAnswer == answer){
-		document.write("Вы угадали" + "<br>");
+		alert("Вы угадали");
 		break;
 	} else if (userAnswer > answer){
-		document.write("Вы ввели слишком большое число" + "<br>");
+		alert("Вы ввели слишком большое число");
 	} else if (userAnswer < answer){
-		document.write("Вы ввели слишком маленькое число" + "<br>");
+		alert("Вы ввели слишком маленькое число");
 	}
-	document.write("У Вас осталось " + (7 - tryCount) + " попыток <br>");
+	alert("У Вас осталось " + (7 - tryCount) + " попыток");
 	userAnswer = +prompt("Угадайте число от 0 до 100");
+	
+	if(tryCount == maxTryCount){
+        alert("Вы проиграли!");
+        break;
+    }
+	}
 //alert(userAnswer +" Загадано " + answer);		
 </script>
