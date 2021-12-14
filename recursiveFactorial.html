@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+
+var a = +prompt("Введите число для вычисления факториала");
+
+var rf = recursiveFactorial(a);
+
+function recursiveFactorial(n){
+if (n==0)
+return 1;
+else
+return recursiveFactorial(n-1)*n;
+
+}
+
+alert("Факториал числа " + a + " равен " + rf);
+
+</script>
